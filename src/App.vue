@@ -24,5 +24,7 @@ export default {
 </script>
 
 <style lang="less">
-
+#app{
+  padding-bottom: 50px;
+}
 </style>

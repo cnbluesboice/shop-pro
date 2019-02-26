@@ -3,6 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 将api里面的index.js引入
+import "./api/index"
+
+// 引入初始化css
+import './assets/base.css'
+
 // 引入vant-ui
 import Vant from 'vant';
 import 'vant/lib/index.css';
