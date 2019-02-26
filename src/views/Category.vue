@@ -1,7 +1,6 @@
 <template>
-    <div class="home-container">
-        <h1>Home</h1>
-        <!-- 轮播图部分 -->
+    <div class="category-container">
+        <h1>category</h1>
     </div>
 </template>
 

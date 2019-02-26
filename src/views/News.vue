@@ -1,7 +1,6 @@
 <template>
-    <div class="home-container">
-        <h1>Home</h1>
-        <!-- 轮播图部分 -->
+    <div class="news-container">
+        <h1>news</h1>
     </div>
 </template>
 

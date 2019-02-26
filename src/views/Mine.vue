@@ -1,7 +1,6 @@
 <template>
-    <div class="home-container">
-        <h1>Home</h1>
-        <!-- 轮播图部分 -->
+    <div class="mine-container">
+        <h1>mine</h1>
     </div>
 </template>
 
