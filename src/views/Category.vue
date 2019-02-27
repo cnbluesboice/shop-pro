@@ -11,7 +11,7 @@
       ></van-tab>
     </van-tabs>
     <ul class="subCategories">
-      <li v-for="(item, index) in subCategory" :key="index">
+      <li v-for="(item, index) in subCategory" :key="index" @click="goGoodsList(item.id,item.name)">
         <router-link to="/">
           <img :src="item.img" alt>
           <p>{{item.name}}</p>
@@ -19,8 +19,15 @@
       </li>
     </ul>
 
-    <!-- tabbar部分 -->
-    <tabBar></tabBar>
+    
+    <!-- 底部tabbar -->
+    <van-tabbar v-model="active">
+      <van-tabbar-item icon="wap-home" to="/">首页</van-tabbar-item>
+      <van-tabbar-item icon="label-o" to="/category">分类</van-tabbar-item>
+      <van-tabbar-item icon="search" to="news">新闻</van-tabbar-item>
+      <van-tabbar-item icon="shopping-cart-o" info="20" to="shopCar">购物车</van-tabbar-item>
+      <van-tabbar-item icon="manager-o" to="mine">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
@@ -28,7 +35,7 @@
 export default {
   data() {
     return {
-      active: 0,
+      active: 1,
       goodsCategories: [],
       subCategory: []
     };
@@ -57,6 +64,12 @@ export default {
           //   console.log(result.data);
           this.subCategory = result.data;
         });
+    },
+
+    // 点击进入商品列表
+    goGoodsList(id,title){
+      console.log(id,title)
+      this.$router.push({path:"/goodsList",query:{id,title}})
     }
   }
 };

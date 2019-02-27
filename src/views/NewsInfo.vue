@@ -6,6 +6,7 @@
     left-text="返回" 
     left-arrow 
     @click-left="onClickLeft"/>
+    
     <!-- 内容部分 -->
     <div class="newsContent" v-html="newsInfo.content"></div>
   </div>

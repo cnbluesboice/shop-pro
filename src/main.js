@@ -13,9 +13,9 @@ import './assets/base.css'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 
-// 注册全局tabbar组件
-import TabBarComponent from "./components/tabBar"
-Vue.component("tabBar",TabBarComponent)
+// // 注册全局tabbar组件
+// import TabBarComponent from "./components/tabBar"
+// Vue.component("tabBar",TabBarComponent)
 
 Vue.use(Vant);
 
