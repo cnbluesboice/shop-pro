@@ -5,6 +5,7 @@ import SignUpComponent from "./views/SignUp"
 import HomeComponent from "./views/Home"
 import CategoryComponent from "./views/Category"
 import NewsComponent from "./views/News"
+import NewsInfoComponent from "./views/NewsInfo"
 import ShopCarComponent from "./views/ShopCar"
 import MineComponent from "./views/Mine"
 
@@ -18,6 +19,7 @@ export default new Router({
     {path: '/home',component: HomeComponent},
     {path: '/category',component: CategoryComponent},
     {path: '/news',component: NewsComponent},
+    {path: '/newsInfo/:id',component: NewsInfoComponent},
     {path: '/shopCar',component: ShopCarComponent},
     {path: '/mine',component: MineComponent},
 

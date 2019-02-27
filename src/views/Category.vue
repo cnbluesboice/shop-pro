@@ -18,6 +18,9 @@
         </router-link>
       </li>
     </ul>
+
+    <!-- tabbar部分 -->
+    <tabBar></tabBar>
   </div>
 </template>
 

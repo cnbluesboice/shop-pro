@@ -31,6 +31,9 @@
         </router-link>
       </li>
     </ul>
+
+    <!-- tabbar部分 -->
+    <tabBar></tabBar>
   </div>
 </template>
 
@@ -39,8 +42,6 @@ export default {
   data() {
     return {
       images: [],
-      page: 1,
-      pageSize: 20,
       indexCategories: []
     };
   },
@@ -56,13 +57,16 @@ export default {
       });
     },
     getGoodsSubCategories() {
-      let { page, pageSize } = this;
+      let pageInfo = {
+        page: 1,
+        pageSize: 120
+      }
       this.$http
-        .get(`/goods/getGoodsSubCategories?page=${page}&pageSize=${pageSize}`)
+        .get(`/goods/getGoodsSubCategories`,{params:pageInfo})
         .then(result => {
           //   console.log(result.data.cates);
           this.indexCategories = result.data.cates;
-          console.log(this.indexCategories, 111);
+          // console.log(this.indexCategories, 111);
         });
     }
   }
@@ -120,16 +124,17 @@ export default {
       height: 40px;
       text-align: center;
       line-height: 45px;
-      a{
-          color: #fff;
+      a {
+        color: #fff;
       }
     }
   }
   .van-swipe {
-    height: 200px;
+    width: 100%;
+    // height: 170px;
     img {
       width: 100%;
-      height: 100%;
+      // height: 100%;
     }
   }
   .indexCategories {
@@ -137,18 +142,18 @@ export default {
     // justify-content: space-between;
     flex-wrap: wrap;
     padding: 5px;
-    li{
-        width: 33%;
-        text-align: center;
-        margin: 10px 0;
-        box-sizing: border-box;
-        img{
-            width: 50%;
-        }
-        p{
-            color: #666;
-            font-size: 14px;
-        }
+    li {
+      width: 33%;
+      text-align: center;
+      margin: 10px 0;
+      box-sizing: border-box;
+      img {
+        width: 50%;
+      }
+      p {
+        color: #666;
+        font-size: 14px;
+      }
     }
   }
 }
